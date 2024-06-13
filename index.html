@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Data Produksi Tanaman Perkebunan (Ribu Ton), 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="beranda" class="page">
+        <h1>Visualisasi Data Produksi Tanaman Perkebunan (Ribu Ton), 2023</h1>
+        <button id="getStarted">Get Started</button>
+    </div>
+
+    <div id="menu" class="page">
+        <h1>Pilih Grafik</h1>
+        <button class="navButton" data-target="piePage">Pie Chart</button>
+        <button class="navButton" data-target="barPage">Bar Chart</button>
+        <button class="navButton" data-target="bubblePage">Bubble Chart</button>
+    </div>
+
+    <div id="piePage" class="page">
+        <h1>Produksi Tanaman Perkebunan Kopi (Ribu Ton) pada tahun 2023 berdasarkan 38 provinsi</h1>
+        <canvas id="pieChart"></canvas>
+        <p>Disadur dari Badan Pusat Statistik Indonesia</p>
+        <div id="pieTableContainer">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Provinsi</th>
+                        <th>Produksi Kopi (ribu ton)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button class="navButton" data-target="barPage">Bar Chart</button>
+        <button class="navButton" data-target="bubblePage">Bubble Chart</button>
+        <button class="navButton" data-target="menu">Menu</button>
+    </div>
+
+    <div id="barPage" class="page">
+        <h1>Produksi Karet per Provinsi Tahun 2023 (Ribu Ton)</h1>
+        <div id="barplot"></div>
+        <div id="barTableContainer">
+            <table id="barTable">
+                <thead>
+                    <tr>
+                        <th>Provinsi</th>
+                        <th>Produksi Karet (ribu ton)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button class="navButton" data-target="piePage">Pie Chart</button>
+        <button class="navButton" data-target="bubblePage">Bubble Chart</button>
+        <button class="navButton" data-target="menu">Menu</button>
+    </div>
+
+    <div id="bubblePage" class="page">
+        <h1>Produksi Kelapa Sawit per Provinsi di Tahun 2023</h1>
+        <div id="bubblechart"></div>
+        <div id="bubbleTableContainer">
+            <table id="bubbleTable">
+                <thead>
+                    <tr>
+                        <th>Provinsi</th>
+                        <th>Produksi Kelapa Sawit (ribu ton)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button class="navButton" data-target="piePage">Pie Chart</button>
+        <button class="navButton" data-target="barPage">Bar Chart</button>
+        <button class="navButton" data-target="menu">Menu</button>
+    </div>
+
+    <script src="bar.js"></script>
+    <script src="bubble.js"></script>
+    <script src="pie.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
